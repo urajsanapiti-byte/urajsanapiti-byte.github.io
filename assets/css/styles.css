@@ -365,7 +365,7 @@ main {
 
 .post-header {
     margin-bottom: 1rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1rem solid var(--color-border);
     padding-bottom: 1rem;
 }
 
@@ -490,6 +490,37 @@ main {
 
 .post-details strong {
     color: var(--color-primary);
+}
+
+/* =====================================================
+   9.1 PDF EMBED SECTION (NEW)
+   ===================================================== */
+
+.pdf-embed iframe {
+    width: 100%;
+    height: 700px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* Download button for PDF */
+.download-btn {
+    display: inline-block;
+    background: var(--color-secondary);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--color-secondary);
+}
+
+.download-btn:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    text-decoration: none;
 }
 
 /* =====================================================
