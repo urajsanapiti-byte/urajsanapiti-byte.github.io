@@ -1,0 +1,920 @@
+/* =====================================================
+   LEGAL INSIGHTS - MAIN STYLESHEET
+   Clean, minimal, professional design for law blog
+   ===================================================== */
+
+/* =====================================================
+   1. VARIABLES & COLOR SCHEME
+   ===================================================== */
+
+:root {
+    /* Colors */
+    --color-primary: #1a3a52;        /* Deep Blue - Professional */
+    --color-secondary: #c41e3a;      /* Deep Red - Legal accent */
+    --color-light-bg: #f8f9fa;       /* Off-white background */
+    --color-text: #333333;           /* Dark gray text */
+    --color-text-light: #666666;     /* Medium gray text */
+    --color-border: #e0e0e0;         /* Light borders */
+    --color-accent: #d4af37;         /* Gold accent */
+    
+    /* Typography */
+    --font-serif: 'Georgia', 'Garamond', serif;
+    --font-sans: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    --font-mono: 'Courier New', monospace;
+    
+    /* Sizing */
+    --max-width: 900px;
+    --spacing-unit: 1rem;
+    
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+/* =====================================================
+   2. RESET & BASE STYLES
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-serif);
+    color: var(--color-text);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+/* =====================================================
+   3. TYPOGRAPHY
+   ===================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+em {
+    font-style: italic;
+    color: var(--color-text-light);
+}
+
+/* Code blocks */
+code {
+    background-color: var(--color-light-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    color: var(--color-primary);
+}
+
+pre {
+    background-color: var(--color-light-bg);
+    padding: 1rem;
+    border-left: 4px solid var(--color-secondary);
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* =====================================================
+   4. HEADER & NAVIGATION
+   ===================================================== */
+
+header {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.logo a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo a:hover {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.25rem;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent);
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.4rem;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* =====================================================
+   5. HERO SECTION
+   ===================================================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #2d5a7b 100%);
+    color: #ffffff;
+    padding: 4rem var(--spacing-unit);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0;
+}
+
+/* =====================================================
+   6. PAGE HEADER
+   ===================================================== */
+
+.page-header {
+    background-color: var(--color-light-bg);
+    padding: 3rem var(--spacing-unit);
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.page-header h1 {
+    margin-top: 0;
+    border: none;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin: 0.5rem 0 0 0;
+    text-align: left;
+}
+
+/* =====================================================
+   7. MAIN CONTENT
+   ===================================================== */
+
+main {
+    min-height: 60vh;
+    margin-bottom: 2rem;
+}
+
+.content {
+    padding: 2rem var(--spacing-unit);
+}
+
+.about-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    margin-top: 2rem;
+}
+
+.about-content p {
+    text-align: justify;
+}
+
+.interest-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 1.5rem 0;
+}
+
+.interest-list li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.interest-list li:before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+/* =====================================================
+   8. FEATURED POSTS & BLOG GRID
+   ===================================================== */
+
+.featured-posts {
+    padding: 3rem var(--spacing-unit);
+    background-color: var(--color-light-bg);
+}
+
+.featured-posts h2 {
+    border: none;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 1rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 2rem;
+    transition: var(--transition);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.post-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.post-header {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 1rem;
+}
+
+.post-header h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+.post-header h3 a {
+    color: var(--color-primary);
+}
+
+.post-header h3 a:hover {
+    color: var(--color-secondary);
+}
+
+.post-header time {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+}
+
+.post-card p {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.read-more {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.read-more:hover {
+    color: var(--color-primary);
+    padding-left: 0.5rem;
+}
+
+/* =====================================================
+   9. BLOG POSTS LIST
+   ===================================================== */
+
+.blog-posts {
+    padding: 2rem var(--spacing-unit);
+}
+
+.posts-list {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.post-item {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.post-item:hover {
+    border-color: var(--color-secondary);
+    box-shadow: 0 4px 12px rgba(196, 30, 58, 0.1);
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+}
+
+.post-meta time {
+    color: var(--color-text-light);
+}
+
+.post-category {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.post-item h2 {
+    margin-top: 0;
+    border: none;
+    padding-bottom: 0;
+}
+
+.post-item h2 a {
+    color: var(--color-primary);
+}
+
+.post-item h2 a:hover {
+    color: var(--color-secondary);
+}
+
+.excerpt {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+.post-details {
+    background-color: var(--color-light-bg);
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-secondary);
+    margin: 1.5rem 0;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.post-details strong {
+    color: var(--color-primary);
+}
+
+/* =====================================================
+   10. CONTACT SECTION
+   ===================================================== */
+
+.contact-section {
+    padding: 3rem var(--spacing-unit);
+    background-color: var(--color-light-bg);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.contact-form-container h2 {
+    margin-top: 0;
+    border: none;
+}
+
+.contact-info h2 {
+    margin-top: 0;
+    border: none;
+}
+
+/* Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.1);
+}
+
+.form-note {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-top: 1rem;
+}
+
+/* Contact Info */
+.contact-method {
+    margin-bottom: 2rem;
+}
+
+.contact-method h3 {
+    margin-top: 0;
+}
+
+.contact-method p {
+    text-align: left;
+    line-height: 1.8;
+}
+
+.contact-method ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-method li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.contact-method li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+    font-weight: bold;
+}
+
+.contact-note {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-accent);
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.contact-note p {
+    margin: 0;
+    text-align: left;
+}
+
+/* =====================================================
+   11. FAQ SECTION
+   ===================================================== */
+
+.faq-section {
+    padding: 3rem var(--spacing-unit);
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.faq-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background-color: var(--color-light-bg);
+    padding: 1.5rem;
+    border-radius: 4px;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+}
+
+.faq-item p {
+    text-align: left;
+    margin: 0.5rem 0 0 0;
+    color: var(--color-text-light);
+}
+
+/* =====================================================
+   12. BUTTONS & CALL TO ACTION
+   ===================================================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid;
+    text-align: center;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    border-color: var(--color-secondary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 3rem var(--spacing-unit);
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.cta-section h2 {
+    color: #ffffff;
+    border: none;
+    margin-top: 0;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.cta-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+}
+
+.cta-box h3 {
+    color: #ffffff;
+}
+
+.cta-box p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* =====================================================
+   13. FOOTER
+   ===================================================== */
+
+footer {
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem var(--spacing-unit);
+    margin-top: 3rem;
+    border-top: 3px solid var(--color-secondary);
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-family: var(--font-sans);
+}
+
+footer a {
+    color: var(--color-accent);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   14. RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+    :root {
+        --max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: var(--color-primary);
+        padding: 1rem;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 1rem 0;
+        border-bottom: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Layout adjustments */
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 2rem var(--spacing-unit);
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Posts */
+    .post-item {
+        padding: 1.5rem;
+    }
+
+    .post-details {
+        padding: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem var(--spacing-unit);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.95rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .page-header {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .nav-wrapper {
+        padding: 0.75rem 0;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-menu {
+        gap: 0;
+    }
+
+    .post-card {
+        padding: 1rem;
+    }
+
+    .post-item {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}

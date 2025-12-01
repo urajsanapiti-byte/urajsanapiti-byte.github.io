@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - Legal Insights</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <h1 class="logo"><a href="index.html">Legal Insights</a></h1>
+                    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <p>Have questions or want to discuss legal topics? I'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <h2>Send Me a Message</h2>
+                        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required aria-label="Your name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required aria-label="Your email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="What is this about?" required aria-label="Message subject">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Your message..." required aria-label="Your message"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                        <p class="form-note"><em>Note: Currently this form is set up as a template. To enable email submissions, update the form action with your Formspree endpoint or use another form service.</em></p>
+                    </div>
+
+                    <!-- Direct Contact Info -->
+                    <div class="contact-info">
+                        <h2>Other Ways to Connect</h2>
+                        
+                        <div class="contact-method">
+                            <h3>Email</h3>
+                            <p>
+                                For direct inquiries, you can email me at:
+                                <br>
+                                <a href="mailto:your.email@example.com">yuvaraj.ak@law.christuniversity.in</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>Social Media</h3>
+                            <p>
+                                Connect with me on social platforms:
+                                <br>
+                                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> | 
+                                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </p>
+                        </div>
+
+                        <div class="contact-method">
+                            <h3>Topics I Enjoy Discussing</h3>
+                            <ul>
+                                <li>Constitutional Law and Jurisprudence</li>
+                                <li>Case Analysis and Legal Writing</li>
+                                <li>Law School Experiences and Tips</li>
+                                <li>Legal Education and Career Paths</li>
+                                <li>Comments on Published Articles</li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-note">
+                            <p><strong>Note:</strong> I aim to respond to all inquiries within 5-7 business days. For urgent matters, please clearly mark your email as such.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>Is this blog legal advice?</h3>
+                        <p>No. The content on this blog is educational material only and should not be considered legal advice. If you need legal advice, please consult with a qualified attorney licensed in your jurisdiction.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can you review my case?</h3>
+                        <p>I cannot provide legal services or case reviews. I'm a law student sharing educational content. For legal assistance with your matter, please contact a licensed attorney.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How often do you publish new posts?</h3>
+                        <p>I aim to publish new articles regularly as my law school schedule permits. Check back frequently or follow my social media for updates on new content.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Can I use your content for my own blog or publication?</h3>
+                        <p>Please contact me regarding permissions and proper attribution. Most content is available for educational purposes with appropriate credit.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do you accept guest posts?</h3>
+                        <p>I'm open to discussing collaboration opportunities. Please reach out with your proposal and we can discuss further.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Legal Insights. A Law Student's Blog. All rights reserved.</p>
+            <p>Disclaimer: This blog contains educational content only and is not legal advice.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
